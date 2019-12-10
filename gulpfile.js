@@ -22,6 +22,7 @@ const rollup = require('gulp-better-rollup');
 const babel = require('rollup-plugin-babel');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
+const eslint = require('gulp-eslint');
 
 // development mode?
 var devBuild = process.env.NODE_ENV !== 'production';
@@ -66,8 +67,12 @@ exports.html = gulp.series(images, html);
 function js() {
   const out = build + 'assets/js/';
   return gulp
-    .src(src + 'assets/js/**/*')
+    .src([src + 'assets/js/**/*', '!node_modules/**'])
     .pipe(sourcemaps ? sourcemaps.init() : noop())
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError())
+    .pipe(eslint.failAfterError())
     .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
     .pipe(sourcemaps ? sourcemaps.write() : noop())
     .pipe(gulp.dest(out));
@@ -78,7 +83,11 @@ exports.js = js;
 function css() {
   const out = build + 'assets/css/';
   return gulp
-    .src(src + 'assets/sass/main.scss')
+    .src([
+      src + 'assets/sass/main.scss',
+      'node_modules/bootstrap/dist/css/bootstrap.css',
+      'node_modules/font-awesome/css/font-awesome.css'
+    ])
     .pipe(sourcemaps ? sourcemaps.init() : noop())
     .pipe(
       sass({

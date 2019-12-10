@@ -1,42 +1,32 @@
 // global
-@import "global/variables";
-@import "global/functions";
-@import "global/mixins";
-
-// vendors
-@import "vendors/bootstrap";
-@import "vendors/font-awesome";
+@import 'global/variables';
+@import 'global/functions';
+@import 'global/mixins';
 
 // base
-@import "base/resets";
-@import "base/fonts";
-@import "base/typography";
-@import "base/base";
+@import 'base/resets';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/base';
 
 // components
-@import "components/buttons";
-@import "components/card";
-@import "components/chat";
-@import "components/loader";
-@import "components/modal";
-@import "components/list";
-@import "components/nav";
-@import "components/search";
-@import "components/snackbar";
-@import "components/switch";
+@import 'components/buttons';
+@import 'components/loader';
+@import 'components/modal';
+@import 'components/nav';
 
 // layout
-@import "layouts/footer";
-@import "layouts/header";
-@import "layouts/page";
-@import "layouts/section";
+@import 'layouts/footer';
+@import 'layouts/header';
+@import 'layouts/page';
+@import 'layouts/section';
 
 // pages
-@import "pages/home";
-@import "pages/page";
+@import 'pages/home';
+@import 'pages/page';
 
 // themes
-@import "themes/default";
+@import 'themes/default';
 
 // helpers
-@import "helpers/utility";
+@import 'helpers/utility';
