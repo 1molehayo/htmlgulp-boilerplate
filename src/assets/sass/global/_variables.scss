@@ -1,0 +1,41 @@
+$colors: (
+  black: #000,
+  dark: #27394b,
+  grey: #8c8c8c,
+  light-grey: #f5f5f5,
+  primary: #565fdc,
+  secondary: #5da3ee,
+  red: #f51368,
+  white: #fff
+);
+
+$font-families: (
+  circular: "CircularStd",
+  lato: "Lato"
+);
+
+$font-weights: (
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  black: 900
+);
+
+$font-sizes: (
+  xx-small: 9px,
+  x-small: 12px,
+  small: 14px,
+  regular: 16px,
+  medium: 18px,
+  large: 24px,
+  m-large: 30px,
+  x-large: 40px,
+  xx-large: 70px,
+  xxx-large: 96px
+);
+
+$backgroundgradient: linear-gradient(
+  90deg,
+  color(secondary) -32%,
+  color(primary) 136%
+);

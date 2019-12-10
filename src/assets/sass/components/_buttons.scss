@@ -1,0 +1,88 @@
+.button {
+  @include font-family(circular);
+  @include font-size(small);
+  @include font-weight(regular);
+  display: inline-block;
+  border-radius: 6px;
+  border: 0;
+  padding: 0.75rem 2.5rem;
+  text-transform: capitalize;
+  transition: color 0.8s ease;
+  transition-property: background-color, color;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &__icon {
+    @include font-size(large);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  &--link {
+    @include font-family(lato);
+    @include font-size(x-small);
+    background-color: transparent;
+    color: color(black);
+
+    &-icon {
+      @include font-size(small);
+      display: inline-block;
+      margin-right: 0.5rem;
+      margin-bottom: 3px;
+      vertical-align: middle;
+      color: color(primary);
+    }
+
+    &:hover {
+      color: color(primary);
+    }
+  }
+
+  &--outline {
+    border: 1px solid color(primary);
+    background: transparent;
+    color: color(primary);
+
+    &:hover {
+      background: color(primary);
+      color: color(white);
+    }
+  }
+
+  &--primary {
+    box-shadow: 0 6px 16px rgba(88, 111, 224, 0.29);
+    background: $backgroundgradient;
+    color: color(white) !important;
+
+    &:hover {
+      box-shadow: none;
+      border: 0;
+      background: $backgroundgradient;
+      opacity: 0.8;
+    }
+  }
+
+  &--white {
+    background: color(white);
+    color: color(primary) !important;
+
+    &:hover {
+      box-shadow: none;
+      border: 0;
+      background: color(white);
+      opacity: 0.8;
+    }
+  }
+}
+
+button {
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

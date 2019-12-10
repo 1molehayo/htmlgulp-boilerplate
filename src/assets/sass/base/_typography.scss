@@ -1,0 +1,24 @@
+.heading {
+  @include font-family(circular);
+  @include font-size(large);
+  @include font-weight(medium);
+  @include respond(small) {
+    @include font-size(medium);
+  }
+  margin-bottom: 1.5rem;
+  text-align: left;
+  line-height: 1.3;
+  color: color(dark);
+}
+
+.paragraph {
+  @include font-family(circular);
+  @include font-size(regular);
+  @include font-weight(regular);
+  @include respond(small) {
+    @include font-size(small);
+  }
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+  color: color(grey);
+}

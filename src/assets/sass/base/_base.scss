@@ -1,0 +1,12 @@
+body {
+  @include font-family(circular);
+  @include font-size(regular);
+  @include font-weight(regular);
+  line-height: normal;
+  letter-spacing: normal;
+  color: color(grey);
+}
+
+html {
+  scroll-behavior: smooth;
+}
