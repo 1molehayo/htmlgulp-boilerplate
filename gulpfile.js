@@ -4,11 +4,6 @@ var imagemin = require('gulp-imagemin');
 var newer = require('gulp-newer');
 var noop = require('gulp-noop');
 
-// var concat = require('gulp-concat');
-// var deporder = require('gulp-deporder');
-// var terser = require('gulp-terser');
-// var stripdebug = devBuild ? null : require('gulp-strip-debug');
-
 var sourcemaps = devBuild ? require('gulp-sourcemaps') : null;
 var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
@@ -52,18 +47,6 @@ function html() {
 exports.html = gulp.series(images, html);
 
 // JavaScript processing
-// function js() {
-//   const out = build + 'assets/js/';
-//   return gulp
-//     .src(src + 'assets/js/**/*')
-//     .pipe(sourcemaps ? sourcemaps.init() : noop())
-//     .pipe(deporder())
-//     .pipe(concat('main.js'))
-//     .pipe(stripdebug ? stripdebug() : noop())
-//     .pipe(terser())
-//     .pipe(sourcemaps ? sourcemaps.write() : noop())
-//     .pipe(gulp.dest(out));
-// }
 function js() {
   const out = build + 'assets/js/';
   return gulp
