@@ -25,7 +25,7 @@ var src = 'src/';
 var build = 'dist/';
 
 // image processing
-function images() {
+async function images() {
   const out = build + 'assets/images/';
 
   return gulp
@@ -37,7 +37,7 @@ function images() {
 exports.images = images;
 
 // HTML processing
-function html() {
+async function html() {
   return gulp
     .src(src + '**/*.html')
     .pipe(newer(build))
@@ -47,7 +47,7 @@ function html() {
 exports.html = gulp.series(images, html);
 
 // JavaScript processing
-function js() {
+async function js() {
   const out = build + 'assets/js/';
   return gulp
     .src([src + 'assets/js/**/*', '!node_modules/**'])
@@ -63,7 +63,7 @@ function js() {
 exports.js = js;
 
 // CSS processing
-function css() {
+async function css() {
   const out = build + 'assets/css/';
   return gulp
     .src([
@@ -94,7 +94,7 @@ function css() {
 exports.css = gulp.series(images, css);
 
 // Fonts
-function fonts() {
+async function fonts() {
   const out = build + 'assets/fonts/';
   return gulp.src(src + 'assets/fonts/**/*').pipe(gulp.dest(out));
 }
@@ -108,7 +108,7 @@ exports.build = gulp.parallel(
 );
 
 // watch for file changes
-function watch(done) {
+async function watch(done) {
   browserSync.init({
     port: 8080,
     server: build
