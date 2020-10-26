@@ -68,8 +68,7 @@ async function css() {
   return gulp
     .src([
       src + 'assets/sass/main.scss',
-      'node_modules/bootstrap/dist/css/bootstrap.css',
-      'node_modules/font-awesome/css/font-awesome.css'
+      'node_modules/bootstrap/dist/css/bootstrap.css'
     ])
     .pipe(sourcemaps ? sourcemaps.init() : noop())
     .pipe(
