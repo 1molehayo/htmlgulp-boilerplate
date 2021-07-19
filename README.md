@@ -15,6 +15,7 @@ The external libraries and lint used are listed below:
 - [gulp](https://gulpjs.com/)
 - [autoprefixer](https://github.com/postcss/autoprefixer#readme)
 - [babel](https://babeljs.io/)
+- [jquery](https://jquery.com/)
 - [css-mqpacker](https://www.npmjs.com/package/mqpacker)
 - [cssnano](https://cssnano.co/)
 - [postcss-assets](https://github.com/borodean/postcss-assets#readme)
